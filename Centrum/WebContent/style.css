@@ -4,15 +4,25 @@ body {
 }
 
 div {
-	background-color: gray;
+	 
 }
 
 #header {
-	height: 100px;
+	height: 140px;
 }
 
- 
+ #wrapper {
+     background-image: url(images/bcs-bg-pattern.jpg);
+    background-repeat: no-repeat;
+    background-color: #02516f;
+    position: relative;
+ }
 
+#sidebar {
+	height: 300px;
+	background-color: gray;
+}
+ 
 #content {
 	background-color: silver;
 	height:  500px;
