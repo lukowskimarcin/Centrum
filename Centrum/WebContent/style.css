@@ -11,18 +11,15 @@ div {
 	height: 100px;
 }
 
-#main_menu {
-	height: 50px;
-	background-color: red;
-}
+ 
 
 #content {
-	background-color: blue;
+	background-color: silver;
 	height:  500px;
 }
 
 #footer {
-	background-color: green;
+	background-color: gray;
 	height: 100px;
 }
 
