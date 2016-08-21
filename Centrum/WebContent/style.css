@@ -18,17 +18,18 @@ div {
     position: relative;
  }
 
-#sidebar {
-	height: 300px;
-	background-color: gray;
-}
 
 
 #pageWrapper {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+	 margin-left: 50px;
+	 margin-right: 50px;
 }
+
+#sidebar {
+	height: 200px;
+	background-color: gray;
+}
+
  
 #content {
 	background-color: silver;
