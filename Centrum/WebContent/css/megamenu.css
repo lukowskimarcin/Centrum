@@ -18,10 +18,8 @@ body {
 * {
     box-sizing: border-box;
 }
-
-a {
-    color: #FFF;
-}
+ 
+ 
 
 .description {
     position: absolute;
@@ -55,7 +53,19 @@ Screen style's
 .menu-mobile {
     display: none;
     padding: 20px;
+   font-weight: bold;
+} 
+
+.menu a {
+	color: #FFF;
+	text-decoration:  none;
 }
+
+.menu a:HOVER {
+	color: #FFF;
+	text-decoration:  none;
+}
+ 
 
 .menu-mobile:after {
     content: "\f394";
@@ -68,6 +78,7 @@ Screen style's
     -webkit-transform: translateY(-25%);
     -ms-transform: translateY(-25%);
     transform: translateY(-25%);
+    font-weight: normal;
 }
 
 .menu-dropdown-icon:before {
@@ -78,7 +89,7 @@ Screen style's
     float: right;
     padding: 1.5em 2em;
     background: #fff;
-    color: #333;
+    color: #FFF;
 }
 
 .menu > ul {
@@ -114,7 +125,7 @@ Screen style's
     text-decoration: none;
     padding: 1.5em 3em;
     display: block;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -164,7 +175,7 @@ Screen style's
     width: 95%;
     display: block;
     border-bottom: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: normal;
 }
 
@@ -191,7 +202,7 @@ Screen style's
     width: 100%;
     padding: 10px 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: normal;
 }
 
@@ -212,7 +223,7 @@ Screen style's
 .menu > ul > li > ul.normal-sub > li a {
     border: 0;
     padding: 1em 0;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: normal;
 }
 
