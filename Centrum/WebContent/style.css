@@ -33,12 +33,13 @@ div {
  
 #content {
 	background-color: silver;
-	height:  500px;
+	padding-top: 30px;
+	padding-bottom: 10px;
 }
 
 #footer {
 	background-color: gray;
-	height: 100px;
+	 
 }
 
 .carousel-inner img {
