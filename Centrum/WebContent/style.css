@@ -4,43 +4,104 @@ body {
 }
 
 div {
-	 
+	/* border: 1px solid red; */
 }
+ 
+
 
 #header {
 	height: 140px;
 }
 
- #wrapper {
-     background-image: url(images/bcs-bg-pattern.jpg);
-    background-repeat: no-repeat;
-    background-color: #02516f;
-    position: relative;
- }
+#logo {
+	padding-left: 15px;
+}
 
-
-
-#pageWrapper {
-	 margin-left: 50px;
-	 margin-right: 50px;
+#search {
+	margin-top: 50px;
 }
 
 #sidebar {
-	height: 200px;
-	background-color: gray;
+	padding: 0px;
+	
+    
+    
 }
 
  
 #content {
-	background-color: silver;
 	padding-top: 30px;
 	padding-bottom: 10px;
+	padding-left: 15px;
+	height: 550px;
 }
 
 #footer {
 	background-color: gray;
-	 
+	background-image: url(images/gradient.png);
+	color: #FFF;
+	padding: 10px;
 }
+
+#footer p {
+	margin: 0px;
+}
+
+ .wrapper {
+     background-image: url(images/bcs-bg-pattern.jpg);
+    background-repeat: no-repeat;
+    background-color: #02516f;
+    position: relative;
+    padding: 0px;
+ }
+
+/* Side menu */
+.sidemenu {
+	font-weight: bolder;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;
+	
+}
+
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+    background-color: #017d9f;
+    overflow: auto;
+    border-radius: 4px;
+   
+}
+
+.sidemenu li {
+	  border-bottom: 1px solid #1ff1f4;
+}
+
+.sidemenu li:last-child {
+    border-bottom: none;
+}
+
+.sidemenu li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    padding-left: 20px; 
+    color: #FFF;
+}
+
+.sidemenu li a.active {
+    background-color: #013E55;
+   
+}
+
+.sidemenu li a:hover:not(.active) {
+    background-color:#02516f;
+    color: #1ff1f4;
+}
+
+/* Karusela */
 
 .carousel-inner img {
   margin: auto;
