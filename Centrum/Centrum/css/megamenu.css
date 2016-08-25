@@ -89,8 +89,9 @@ Screen style's
     cursor: pointer;
     float: right;
     padding: 1.5em 2em;
-    background: #fff;
+    background: #01415a;
     color: #FFF;
+    font-weight: bold;
 }
 
 .menu > ul {

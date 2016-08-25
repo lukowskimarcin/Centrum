@@ -1,20 +1,12 @@
 <?php
  
 function register_my_menus() {
- 
   register_nav_menus(
- 
     array(
- 
-      'menu_poziome' => __( 'Poziome menu' ),
-      'menu_pionowe' => __( 'Pionowe menu' )
- 
+      'menu_poziome' => __( 'Poziome menu' ) 
     )
- 
   );
- 
 }
-
 
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
