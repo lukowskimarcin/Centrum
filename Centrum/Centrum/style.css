@@ -1,6 +1,6 @@
 /*
 Theme Name: Centrum
-Author: Marcin £ukowski
+Author: Marcin ï¿½ukowski
 Version: 0.0.1
 Tags: bootstrap
 */
@@ -21,8 +21,22 @@ div {
 	padding-left: 15px;
 }
 
+.contact {
+	color: #999;
+	text-decoration: none;
+	padding-top: 20px;
+}
+
+.contact a:HOVER {
+	color: #1ff1f4;
+	text-decoration: none;
+}
+
+
 #search {
 	margin-bottom: 5px;
+	float: left;
+	width: 180px;
 }
 
 #sidebar {
