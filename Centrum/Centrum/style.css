@@ -1,6 +1,6 @@
 /*
 Theme Name: Centrum
-Author: Marcin �ukowski
+Author: Marcin Łukowski
 Version: 0.0.1
 Tags: bootstrap
 */
@@ -22,10 +22,14 @@ div {
 }
 
 .contact {
+	padding-top: 30px;
+}
+
+.contact a {
 	color: #999;
 	text-decoration: none;
-	padding-top: 20px;
 }
+
 
 .contact a:HOVER {
 	color: #1ff1f4;
@@ -36,7 +40,7 @@ div {
 #search {
 	margin-bottom: 5px;
 	float: left;
-	width: 180px;
+	 
 }
 
 #sidebar {
@@ -76,6 +80,26 @@ div {
     position: relative;
     padding: 0px;
  }
+
+@media ( max-width :767px) {
+	#search {
+		margin-bottom: 5px;
+		foat: left;
+		width: 50%;
+	}
+	.contact {
+		color: #999;
+		text-decoration: none;
+		padding-top:5px;
+		padding-right: 10px;
+		float:right;
+		
+	}
+	.contact a:HOVER {
+		color: #1ff1f4;
+		text-decoration: none;
+	}
+}
 
 /* Side menu */
 .sidemenu {

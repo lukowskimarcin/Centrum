@@ -19,21 +19,35 @@
 	
 	 <div class="container-fluid">
 	 	<div class="row">
-			<div class="col-sm-4 ">
-				<img id="logo" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" />
+			<div class="col-sm-2 ">
+				<img id="logo" alt="Centrum Statystyczne" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" style="margin-bottom: -30px;"/>
 			</div>
-			<div id="search" class="col-sm-2 col-sm-offset-5 ">
-				 
-				 <form class="szukaj" action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Szukaj..." value="<?php the_search_query(); ?>">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">
-								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							</button>
-						</span>
+			<div  class="col-sm-3 col-sm-push-6 ">
+					<div  class="hidden-xs contact" style="height:60px;">
+						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl" >
+							<span class="glyphicon glyphicon-envelope"> </span>
+							Kontakt
+						</a>
+					</div>
+					<form   action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8">
+					<div  id="search" class="input-group">					
+							<input type="text" class="form-control" placeholder="Szukaj...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</span>
 					</div>
 					</form>
+					
+					<div  class="visible-xs contact">
+						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl"  >
+							<span class="glyphicon glyphicon-envelope"> </span>
+							Kontakt
+						</a>
+					</div>
+					<div class="clearfix"></div>
+					
 			</div>
 		</div>
 	 </div>
