@@ -16,27 +16,37 @@
 <?php wp_head(); ?>
 </head>
 <body>
-	 
-	 
-	 <div class="container-fluid">
+	  
+	  <div class="container-fluid">
 	 	<div class="row">
-			<div class="col-sm-1 ">
-				<img id="logo" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" style="margin-bottom: -30px;"/>
+			<div class="col-sm-2 ">
+				<img id="logo" alt="Centrum Statystyczne" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" style="margin-bottom: -30px;"/>
 			</div>
-			<div  class="col-sm-2 col-sm-push-8 ">
-					<div  class="hidden-xs" style="height:60px;">
+			<div  class="col-sm-3 col-sm-push-6 ">
+					<div  class="hidden-xs contact" style="height:60px;">
+						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl" >
+							<span class="glyphicon glyphicon-envelope"> </span>
+							Kontakt
+						</a>
 					</div>
-					
 					<form action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8">
 					<div  id="search" class="input-group">
-						<input type="text" class="form-control" placeholder="Szukaj...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">
-								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							</button>
-						</span>
+							<input type="text" class="form-control" placeholder="Szukaj...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</span>
 					</div>
 					</form>
+					<div  class="visible-xs contact">
+						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl"  >
+							<span class="glyphicon glyphicon-envelope"> </span>
+							Kontakt
+						</a>
+					</div>
+					<div class="clearfix"></div>
+					
 			</div>
 		</div>
 	 </div>
@@ -113,16 +123,10 @@
   
   
   		<!-- PAGE -->
-  
   		<div class="row">
   			<div class="col-sm-12">
   				<!-- BreadCumb -->
-			<ol class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Library</a></li>
-				<li class="active">Data</li>
-			</ol>
-  			
+  				<?php the_breadcrumb(); ?>
   			</div>
   		</div>
   		
@@ -133,9 +137,7 @@
 					 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
  
 						<div>
-						    <h1>
-						        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						    </h1>
+						    
 						    
 						    <?php the_content('czytaj dalej'); ?>
 						</div>
