@@ -4,6 +4,11 @@
 <title><?php wp_title(); ?> <?php bloginfo('name'); ?></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-language" content="pl">
+<link hreflang="pl" href="http://centrumstatystyczne.pl/" rel="alternate" />
+
+
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"> 
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/megamenu.css">
@@ -16,6 +21,7 @@
 <?php wp_head(); ?>
 </head>
 <body>
+	  <?php include_once("analyticstracking.php") ?>
 	  
 	  <div class="container-fluid">
 	 	<div class="row">
