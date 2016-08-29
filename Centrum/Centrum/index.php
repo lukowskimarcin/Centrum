@@ -17,6 +17,7 @@
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.min.js"></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/megamenu.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/scripts.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -159,6 +160,8 @@
 
 		</div>
 	
+	
+		<div class="scroll-to-top" style="display: block;"><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
 		<div  class="row text-center ">
 			<div class="col-sm-12">
 				<div id="footer" class="well">
