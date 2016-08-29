@@ -9,7 +9,6 @@
 <meta http-equiv="content-language" content="pl">
 <link hreflang="pl" href="http://centrumstatystyczne.pl/" rel="alternate" />
 
-
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"> 
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/megamenu.css">
@@ -41,7 +40,7 @@
 					<div  id="search" class="input-group">
 							<input type="text" class="form-control" placeholder="Szukaj...">
 							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
+								<button class="btn btn-info" type="button">
 									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								</button>
 							</span>
@@ -143,10 +142,7 @@
 				<div id="content" class="well">
 					 
 					 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
- 
 						<div>
-						    
-						    
 						    <?php the_content('czytaj dalej'); ?>
 						</div>
 						 
@@ -162,7 +158,7 @@
 		</div>
 	
 	
-		<div class="scroll-to-top" style="display: block;"><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+		<div class="scroll-to-top"><span class="glyphicon glyphicon-chevron-up"></span></div>
 		<div  class="row text-center ">
 			<div class="col-sm-12">
 				<div id="footer" class="well">

@@ -52,7 +52,7 @@ div {
 	padding-top: 30px;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	height: 550px;
+	min-height: 550px;
 }
 
 #footer {
@@ -156,19 +156,19 @@ div {
 
 
 .scroll-to-top {
-  background: #363636;
   background: rgba(100, 100, 100, 0.4);
+  background-image: url(images/gradient.png);
   color: #FFF;
-  bottom: 4%;
+  bottom: 21px;
   cursor: pointer;
   display: none;
   position: fixed;
-  right: 20px;
+  right: 12px;
   z-index: 999;
   font-size: 16px;
   text-align: center;
   line-height: 40px;
-  width: 40px;
+  width: 35px;
   border-radius: 4px;
   -webkit-transition: background-color 0.3s linear;
      -moz-transition: background-color 0.3s linear;
@@ -176,7 +176,7 @@ div {
           transition: background-color 0.3s linear;
 }
 .scroll-to-top:hover {
-  background: #DA4453;
+  background: #013E55;
   opacity: .8;
 }
 
