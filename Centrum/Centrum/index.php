@@ -53,7 +53,6 @@
 						</a>
 					</div>
 					<div class="clearfix"></div>
-					
 			</div>
 		</div>
 	 </div>
@@ -62,19 +61,16 @@
 	 
 	 	<!-- Menu -->
 		<div class="row">
-
-				<div class="col-sm-12">
-					<div class="menu-container">
-						<div class="menu">
+			<div class="col-sm-12">
+				<div class="menu-container">
+					<div class="menu">
 							<?php wp_nav_menu( array( 'theme_location' => 'menu_poziome', 'depth' => 3)); ?>
 						</div>
-					</div>
-
 				</div>
-
 			</div>
-	  
-	  	<!-- Karuzela -->
+		</div>
+
+		<!-- Karuzela -->
 		<div class="row">
 			<div class="col-sm-12 hidden-xs" >
 				<div id="carousel-example-generic2" class="carousel slide ">
