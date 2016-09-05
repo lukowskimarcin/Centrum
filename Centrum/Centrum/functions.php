@@ -57,6 +57,11 @@ function my_css_attributes_filter($var)
     return is_array($var) ? array() : '';
 }
 
+function modify_read_more_link() {
+	return '<a class="read-more btn btn-info" href="' . get_permalink() . '">Czytaj dalej...</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes
 add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID

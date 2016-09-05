@@ -124,11 +124,10 @@
 			</div>
 		</div>
   
-  
   		<!-- PAGE -->
   		<div class="row">
   			<div class="col-sm-12">
   				<!-- BreadCumb -->
-  				<?php the_breadcrumb(); ?>
+  				<?php the_breadcrumb(); ?>  				
   			</div>
   		</div>

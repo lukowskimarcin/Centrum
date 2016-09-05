@@ -169,9 +169,10 @@ Screen style's
     list-style: none;
     box-sizing: border-box;
     
+    
     animation-name: menu_droplist;
     animation-duration: 0.8s;
-    animation-fill-mode: forward;
+    animation-fill-mode: forwards;
     animation-timing-function: easy-in-out;
 }
 

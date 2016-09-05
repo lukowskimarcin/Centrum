@@ -181,6 +181,17 @@ div {
   opacity: .8;
 }
 
+/* Content css */
+
+.entry-title a {
+	text-decoration: none;
+}
+
+
+.read-more {
+	
+}
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */
