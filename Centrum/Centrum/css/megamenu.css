@@ -130,7 +130,7 @@ Screen style's
     text-decoration: none;
     padding: 1.5em 3em;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
    
  -webkit-transition: color 0.3s linear;
@@ -162,6 +162,7 @@ Screen style's
     width: 100%;
     background: #017d9f;
     padding: 20px;
+    padding-bottom: 5px;
     position: absolute;
     z-index: 99;
     left: 0;
@@ -190,7 +191,7 @@ Screen style's
     margin: 0;
     padding-bottom: 0;
     list-style: none;
-    width: 25%;
+    width: 10%;
     background: none;
     float: left;
 }
@@ -199,9 +200,10 @@ Screen style's
     padding: .2em 0;
     width: 95%;
     display: block;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     font-size: 12px;
     font-weight: normal;
+    min-height: 45px;
 }
 
 .menu > ul > li > ul > li > ul {
@@ -225,14 +227,15 @@ Screen style's
 .menu > ul > li > ul > li > ul > li {
     float: left;
     width: 100%;
-    padding: 10px 0;
+     
     margin: 0;
-    font-size: 12px;
-    font-weight: normal;
+   
 }
 
 .menu > ul > li > ul > li > ul > li a {
     border: 0;
+     font-size: 11px;
+    font-weight: normal;
 }
 
 .menu > ul > li > ul.normal-sub {
