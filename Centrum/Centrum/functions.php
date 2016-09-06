@@ -6,7 +6,7 @@ function the_breadcrumb() {
 	echo '<li><a href="';
 	echo get_option('home');
 	echo '">';
-	echo 'Home';
+	echo 'Centrum';
 	echo "</a></li>";
 	
 	
@@ -58,7 +58,7 @@ function my_css_attributes_filter($var)
 }
 
 function modify_read_more_link() {
-	return '<a class="read-more btn btn-info" href="' . get_permalink() . '">Czytaj dalej...</a>';
+	return '<a class="read-more btn btn-info" href="' . get_permalink() . '">Czytaj dalej</a><div class="clearfix"></div>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 

@@ -71,7 +71,7 @@
 		</div>
 
 		<!-- Karuzela -->
-		<div class="row">
+		<div class="row" style="display: none;">
 			<div class="col-sm-12 hidden-xs" >
 				<div id="carousel-example-generic2" class="carousel slide ">
 					<!-- Wskaźniki w postaci kropek -->

@@ -189,7 +189,9 @@ div {
 
 
 .read-more {
-	
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
 }
 
 
