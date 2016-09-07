@@ -123,11 +123,26 @@
 				</div>
 			</div>
 		</div>
+		
+		 
   
   		<!-- PAGE -->
   		<div class="row">
-  			<div class="col-sm-12">
-  				<!-- BreadCumb -->
-  				<?php the_breadcrumb(); ?>  				
+  			<div class="col-sm-12">	
+  			<?php 
+  		  	if ( function_exists( 'menu_breadcrumb') and is_page() ) { 
+  		  		
+		    	    menu_breadcrumb( 
+        	    		'menu_poziome',                             // Menu Location to use for breadcrumb
+	            		'  &raquo; ',		                        // separator between each breadcrumb
+    	        		'<ol id="crumbs" class="breadcrumbs"><li style="margin-right: 5px;"><a href="'. get_option('home') .' ">Centrum</a><span class="sep"> &raquo; </span></li>',      // output before the breadcrumb
+        	    		'</ol>'		        	                    // output after the breadcrumb
+        			); 
+    			} else {
+    				the_breadcrumb();
+    			}
+			?>
   			</div>
   		</div>
+  		
+  		 

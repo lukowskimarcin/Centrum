@@ -47,7 +47,35 @@ div {
 	padding: 0px;
 }
 
- 
+.breadcrumbs {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px
+}
+
+.breadcrumbs>li {
+	display: inline-block
+}
+
+.sep {
+	padding: 0 5px;
+	color: #ccc;
+}
+
+/*
+.breadcrumb>li+li:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0"
+}
+*/
+
+.breadcrumb>.active {
+	color: #777
+}
+
 #content {
 	padding-top: 30px;
 	padding-bottom: 10px;
@@ -81,25 +109,7 @@ div {
     padding: 0px;
  }
 
-@media ( max-width :767px) {
-	#search {
-		margin-bottom: 5px;
-		foat: left;
-		width: 50%;
-	}
-	.contact {
-		color: #999;
-		text-decoration: none;
-		padding-top:5px;
-		padding-right: 10px;
-		float:right;
-		
-	}
-	.contact a:HOVER {
-		color: #5bc0de;
-		text-decoration: none;
-	}
-}
+
 
 /* Side menu */
 .sidemenu {
@@ -181,6 +191,7 @@ div {
   opacity: .8;
 }
 
+
 /* Content css */
 
 .entry-title a {
@@ -194,6 +205,96 @@ div {
 	margin-top: 20px;
 }
 
+
+post-title {
+	
+}
+
+.nav-links {
+	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.post-navigation .nav-previous  {
+	float: left;
+	margin-left: 15px;
+}
+
+.post-navigation .nav-next  {
+	float: right;
+	margin-right: 15px;
+}
+
+.post-navigation a  {
+	border: 1px solid #46b8da;
+	color: #fff;
+    background-color: #5bc0de;
+	border-radius: 4px;
+	display: block;
+	margin: 0 0 1.5em;
+	overflow: hidden;
+	text-decoration: none;
+	padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;    
+    text-align: center;
+    /*white-space: nowrap;*/
+	vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.post-navigation a:focus {
+	color: #fff;
+	background-color: #31b0d5;
+	border-color: #1b6d85;
+}
+
+.post-navigation a:hover {
+	color: #fff;
+	background-color: #31b0d5;
+	border-color: #269abc;
+}
+
+
+@media ( max-width :767px) {
+	#search {
+		margin-bottom: 5px;
+		foat: left;
+		width: 50%;
+	}
+	.contact {
+		color: #999;
+		text-decoration: none;
+		padding-top:5px;
+		padding-right: 10px;
+		float:right;
+		
+	}
+	.contact a:HOVER {
+		color: #5bc0de;
+		text-decoration: none;
+	}
+	
+	.post-navigation .nav-previous  {
+		float: left;
+		max-width: 49%;
+		margin-left: 1%;
+	}
+	
+	.post-navigation .nav-next  {
+		float: right;
+		max-width: 49%;
+		margin-right: 1%;
+	}
+}
 
 /* =WordPress Core
 -------------------------------------------------------------- */
