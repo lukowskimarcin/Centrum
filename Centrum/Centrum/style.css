@@ -77,10 +77,10 @@ div {
 }
 
 #content {
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	min-height: 550px;
+	min-height: 300px;
 }
 
 #footer {
@@ -294,6 +294,8 @@ post-title {
 		margin-right: 1%;
 	}
 }
+
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */
