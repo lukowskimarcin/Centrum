@@ -58,21 +58,18 @@
 	 </div>
 	 
 	 <div class="container-fluid wrapper">
-	 
 	 	<!-- Menu -->
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="menu-container">
-					<div class="menu">
-							<?php wp_nav_menu( array( 'theme_location' => 'menu_poziome', 'depth' => 3)); ?>
-						</div>
-				</div>
+		<div class="row">			
+			<div class="menu-container">
+				<div class="menu">
+						<?php wp_nav_menu( array( 'theme_location' => 'menu_poziome', 'depth' => 3)); ?>
+					</div>
 			</div>
 		</div>
 
-		<!-- Karuzela -->
+		<!-- Carusel -->
 		<div class="row" style="display: none;">
-			<div class="col-sm-12 hidden-xs" >
+			<div class="hidden-xs" >
 				<div id="carousel-example-generic2" class="carousel slide ">
 					<!-- Wskaźniki w postaci kropek -->
 					<ol class="carousel-indicators">
@@ -123,12 +120,8 @@
 				</div>
 			</div>
 		</div>
-		
-		 
   
-  		<!-- PAGE -->
-  		<div class="row">
-  			<div class="col-sm-12">	
+  		<div class="row">  			
   			<?php 
   		  	if ( function_exists( 'menu_breadcrumb') and is_page() ) { 
   		  		
@@ -141,8 +134,7 @@
     			} else {
     				the_breadcrumb();
     			}
-			?>
-  			</div>
+			?>  			
   		</div>
   		
   		 

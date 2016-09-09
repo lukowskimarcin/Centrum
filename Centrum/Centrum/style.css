@@ -106,7 +106,7 @@ div {
     background-repeat: no-repeat;
     background-color: #02516f;
     position: relative;
-    padding: 0px;
+   
  }
 
 
@@ -173,7 +173,7 @@ div {
   cursor: pointer;
   display: none;
   position: fixed;
-  right: 12px;
+  right: 26px;
   z-index: 999;
   font-size: 16px;
   text-align: center;
