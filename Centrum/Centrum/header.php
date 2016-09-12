@@ -36,11 +36,11 @@
 							Kontakt
 						</a>
 					</div>
-					<form action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8" class="form-search">
+					<form action="<?php bloginfo('url'); ?>" role="search" method="get" accept-charset="utf-8" class="form-search">
 					<div  id="search" class="input-group">
-							<input type="text" class="form-control" placeholder="Szukaj...">
+							<input name="s" type="text" class="form-control" placeholder="Szukaj...">
 							<span class="input-group-btn">
-								<button class="btn btn-info" type="submit">
+								<button id="searchsubmit" name="submit" class="btn btn-info" type="submit">
 									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								</button>
 							</span>

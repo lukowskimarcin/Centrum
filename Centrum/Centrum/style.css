@@ -80,7 +80,11 @@ div {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	min-height: 300px;
+	min-height: 250px;
+}
+
+.content-wrapper {
+	min-height: 655px;
 }
 
 #footer {
@@ -259,6 +263,35 @@ post-title {
 	color: #fff;
 	background-color: #31b0d5;
 	border-color: #269abc;
+}
+
+
+.no-result {
+	margin-bottom: 500px;
+}
+
+
+
+@keyframes search_result_anim {
+    0%   {
+    	height: 0%;
+    	opacity: 0;
+    }
+    
+    
+    
+    
+    100% {
+    	height: 100%;
+    	opacity: 1;
+    }
+}
+
+.search-result {
+	animation-name: search_result_anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: easy-in-out;
 }
 
 
