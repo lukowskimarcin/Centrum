@@ -328,6 +328,13 @@ post-title {
 }
 
 
+.icon .glyphicon {
+	-webkit-transition: -webkit-transform .4s ease-in-out;
+          transition:         transform .4s ease-in-out;
+}
+
+ 
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */

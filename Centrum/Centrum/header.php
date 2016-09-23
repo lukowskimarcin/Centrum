@@ -27,7 +27,9 @@
 	  <div class="container-fluid">
 	 	<div class="row">
 			<div class="col-sm-2 ">
-				<img id="logo" alt="Centrum Statystyczne" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" style="margin-bottom: -30px;"/>
+				<a href="http://centrumstatystyczne.pl/">
+					<img id="logo" alt="Centrum Statystyczne" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" style="margin-bottom: -30px;"/>
+				</a>
 			</div>
 			<div  class="col-sm-3 col-sm-push-6 ">
 					<div  class="hidden-xs contact" style="height:60px;">

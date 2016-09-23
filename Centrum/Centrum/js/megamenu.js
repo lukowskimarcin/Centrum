@@ -1,4 +1,19 @@
 /*global $ */
+function iconClick(){
+	if ($(window).width() <= 943) {
+    	//console.log('dropdown click');
+        $(this).parent().children("ul").fadeToggle(150);
+        
+        if ($( this ).find(".glyphicon").css( "transform" ) == 'none' ){
+            $(this).find(".glyphicon").css("transform","rotate(180deg)");
+        } else {
+            $(this).find(".glyphicon").css("transform","" );
+        }
+        
+    }
+}
+
+
 $(document).ready(function () {
 
     "use strict";
@@ -16,13 +31,7 @@ $(document).ready(function () {
     //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
     //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
     //Done this way so it can be used with wordpress without any trouble
-    /*
-    if ($(window).width() <= 943) {
-    	$(".menu-dropdown-icon").each(function(){
-    		$(this).prepend('<div class="icon"><span class="glyphicon glyphicon-plus"></span></div>');
-    	});
-    }
-    */
+   
     
     $(".menu > ul > li").each(function(){
     	$(this).append('<div class="menu_hover"></div>');
@@ -35,12 +44,7 @@ $(document).ready(function () {
 		});
 	    
 	    
-	    $(".icon").click(function () {
-	        if ($(window).width() <= 943) {
-	        	//console.log('dropdown click');
-	            $(this).parent().children("ul").fadeToggle(150);
-	        }
-	    });
+	    $(".icon").click(iconClick);
     }
         
     $(".menu > ul > li").mouseenter(function(){
@@ -63,8 +67,6 @@ $(document).ready(function () {
         }
     });
     //If width is more than 943px dropdowns are displayed on hover
-
-    
     //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
 
     $(".menu-mobile").click(function (e) {
@@ -73,29 +75,31 @@ $(document).ready(function () {
     });
     //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
     
+    var lastSize = $(window).width();
     
     $(window).on('resize', function(){
-        if ($(window).width() <= 943) {
+    	if ($(window).width() <= 943) {
         	$(".menu-dropdown-icon").each(function(){
         		
         		var icon = $(this).find(".icon");
         		if(!icon.length) {
         			$(this).prepend('<div class="icon"><span class="glyphicon glyphicon-plus"></span></div>');
         			//console.log('prepend icon');
-        			
-        			 $(".icon").off().on('click', function () {
-        			        if ($(window).width() <= 943) {
-        			        	//console.log('dropdown click');
-        			            $(this).parent().children("ul").fadeToggle(150);
-        			        }
-        			    });
+        			 $(".icon").off().on('click', iconClick);
         		}
         	});
         } else {
         	$(".icon").off();	
         	$(".icon").remove();
+        	
+        	if(lastSize <= 943) {
+        		$(".menu > ul > li > ul").css('display', 'none');
+        		$(".menu > ul").removeClass('show-on-mobile');
+        	}
         	//console.log('remove icons');
         }
+        
+        lastSize = $(window).width();
     });
     
 
