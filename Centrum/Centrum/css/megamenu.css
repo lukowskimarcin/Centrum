@@ -113,17 +113,20 @@ box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
     font-weight: normal;
 }
 
-.menu-dropdown-icon:before {
+.icon {
     content: "\f489";
     font-family: "Ionicons";
-    display: none;
     cursor: pointer;
     float: right;
     padding: 1.5em 2em;
     background: #01415a;
     color: #FFF;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 100;
+    font-size: 10px;
+    height: 62px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 21px;
 }
 
 .menu > ul {

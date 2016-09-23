@@ -16,15 +16,36 @@ $(document).ready(function () {
     //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
     //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
     //Done this way so it can be used with wordpress without any trouble
-    if ($(window).width() > 943) {
-	    $(".menu > ul > li").each(function(){
-	    	$(this).append('<div class="menu_hover"></div>');
+    /*
+    if ($(window).width() <= 943) {
+    	$(".menu-dropdown-icon").each(function(){
+    		$(this).prepend('<div class="icon"><span class="glyphicon glyphicon-plus"></span></div>');
+    	});
+    }
+    */
+    
+    $(".menu > ul > li").each(function(){
+    	$(this).append('<div class="menu_hover"></div>');
+    });
+    
+    //Dodaje ikony
+    if ($(window).width() <= 943) {
+	    $(".menu-dropdown-icon").each(function(){
+			$(this).prepend('<div class="icon"><span class="glyphicon glyphicon-plus"></span></div>');
+		});
+	    
+	    
+	    $(".icon").click(function () {
+	        if ($(window).width() <= 943) {
+	        	//console.log('dropdown click');
+	            $(this).parent().children("ul").fadeToggle(150);
+	        }
 	    });
     }
-    
+        
     $(".menu > ul > li").mouseenter(function(){
     	if ($(window).width() > 943) {
-    	 $(this).children(".menu_hover").css('display', 'block');
+    		$(this).children(".menu_hover").css('display', 'block');
     	}
     });
     
@@ -43,11 +64,7 @@ $(document).ready(function () {
     });
     //If width is more than 943px dropdowns are displayed on hover
 
-    $(".menu > ul > li").click(function () {
-        if ($(window).width() <= 943) {
-            $(this).children("ul").fadeToggle(150);
-        }
-    });
+    
     //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
 
     $(".menu-mobile").click(function (e) {
@@ -55,5 +72,31 @@ $(document).ready(function () {
         e.preventDefault();
     });
     //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+    
+    
+    $(window).on('resize', function(){
+        if ($(window).width() <= 943) {
+        	$(".menu-dropdown-icon").each(function(){
+        		
+        		var icon = $(this).find(".icon");
+        		if(!icon.length) {
+        			$(this).prepend('<div class="icon"><span class="glyphicon glyphicon-plus"></span></div>');
+        			//console.log('prepend icon');
+        			
+        			 $(".icon").off().on('click', function () {
+        			        if ($(window).width() <= 943) {
+        			        	//console.log('dropdown click');
+        			            $(this).parent().children("ul").fadeToggle(150);
+        			        }
+        			    });
+        		}
+        	});
+        } else {
+        	$(".icon").off();	
+        	$(".icon").remove();
+        	//console.log('remove icons');
+        }
+    });
+    
 
 });
