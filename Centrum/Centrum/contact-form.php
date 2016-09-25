@@ -27,6 +27,8 @@ if (isset ( $_SESSION ['sendContactResult'] )) {
 ?>
 
 
+
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <form class="form-horizontal" id="fContact"   method="POST" action="<?php echo admin_url('admin-post.php'); ?>">
 	<input type="hidden" name="action" value="mail_contact">
@@ -36,7 +38,7 @@ if (isset ( $_SESSION ['sendContactResult'] )) {
 		<label class="control-label col-sm-3" for="cName">Imię:</label>
 		<div class="col-sm-7 col-md-5">
 			<input type="text" class="form-control" id="cName" name="cName"
-				placeholder="Wprowadź imię ..." required="true">
+				placeholder="Wprowadź imię ..." required="true" autofocus>
 		</div>
 	</div>
 
@@ -77,6 +79,12 @@ if (isset ( $_SESSION ['sendContactResult'] )) {
 			</button>
 		</div>
 	</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#cName").focus();
+}
+</script>
 
 </form>
 
