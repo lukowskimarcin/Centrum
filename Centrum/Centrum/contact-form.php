@@ -1,79 +1,37 @@
- <?php 
-if (!empty($_POST)) {
-	if( isset($_POST['cName']) 
-			&& isset($_POST['cEmail']) 
-			&& isset($_POST['cSubject']) 
-			&& isset($_POST['cMessage']) 
-			&& isset($_REQUEST['g-recaptcha-response'])
-			&& !empty($_POST['cEmail'])
-			) 
-	{
-		
-		$name = $_POST['cName'];
-		$email = $_POST['cEmail'];
-		$subject = $_POST['cSubject'];
-		$message = $_POST['cMessage'];
-		$reCAPTCHA = $_REQUEST['g-recaptcha-response'];
-		
-		
-		//Sprawdzenie reCAPTCHA
-		$url = 'https://www.google.com/recaptcha/api/siteverify';
-		$myvars = 'secret=6LfHigcUAAAAADIP7wUxynAesVu_I_L_aMJ1e9LP&response=' . $reCAPTCHA;
-		
-		$ch = curl_init( $url );
-		curl_setopt( $ch, CURLOPT_POST, 1);
-		curl_setopt( $ch, CURLOPT_POSTFIELDS, $myvars);
-		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-		curl_setopt( $ch, CURLOPT_HEADER, 0);
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-		
-		$response = curl_exec( $ch );
-		$json = json_decode($response, true);
-		
-		if("true" == $json['success']) {
-			
-			//add_filter ( 'wp_mail_content_type', create_function ( '', 'return "text/html"; ' ) );
-			$email = wp_mail('monika.nawrocka@centrumstatystyczne.pl', $subject, $message, array('From: '.$name.' <'.$email.'>') );
-			//remove_filter ( 'wp_mail_content_type', 'set_html_content_type' );
-			
-			//$debug = $subject . ', ' . $message . ', ' . $name . ', ' . $email . ' x ';
-			
-			if($email) {
-				echo '<div class="alert alert-success alert_anim">
-							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							Wiadomość została poprawnie wysłana.
-					  </div>';
-			} else {
-				echo '<div class="alert alert-danger alert_anim">
-							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Błąd!</strong> Nie udało się wysłać wiadomości. 
-					  </div>';
-			}
-		} else {
-			/*error-codes:
-				missing-input-secret	The secret parameter is missing.
-				invalid-input-secret	The secret parameter is invalid or malformed.
-				missing-input-response	The response parameter is missing.
-				invalid-input-response	The response parameter is invalid or malformed
-			 */
-			
-			echo '<div class="alert alert-danger alert_anim">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						<strong>Błąd!</strong> Walidacji reCaptcha. ' . $json['error-codes'] . '
-				</div>';
-		}
-	} 
-	else {
-		print_r($_POST);
-		echo 'blad';
+
+<div id="messages" style="display: none;">
+</div>
+
+<?php
+if (isset ( $_SESSION ['sendContactResult'] )) {
+	$result = $_SESSION ['sendContactResult'];
+	
+	if ($result == 1) {
+		echo '<div class="alert alert-success alert_anim">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Wiadomość została poprawnie wysłana.
+			  </div>';
+	} else if ($result == 0) {
+		echo '<div class="alert alert-danger alert_anim">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Błąd!</strong> Nie udało się wysłać wiadomości - proszę spróbować ponownie.
+			  </div>';
+	} else if ($result == - 1) {
+		echo '<div class="alert alert-danger alert_anim">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Błąd!</strong> Nieudana walidacja reCAPTHA. 
+			</div>';
 	}
-
+	unset ( $_SESSION ['sendContactResult'] );
 }
-
 ?>
 
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<form class="form-horizontal" id="fContact"   method="POST">
+<form class="form-horizontal" id="fContact"   method="POST" action="<?php echo admin_url('admin-post.php'); ?>">
+	<input type="hidden" name="action" value="mail_contact">
+  	<input type="hidden" name="origin" value="<?php the_ID(); ?>">
+
 	<div class="form-group">
 		<label class="control-label col-sm-3" for="cName">Imię:</label>
 		<div class="col-sm-7 col-md-5">
@@ -122,3 +80,4 @@ if (!empty($_POST)) {
 
 </form>
 
+ 

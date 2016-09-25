@@ -1,5 +1,19 @@
 <?php
 
+add_action('init', 'myStartSession', 1);
+add_action('wp_logout', 'myEndSession');
+add_action('wp_login', 'myEndSession');
+
+function myStartSession() {
+	if(!session_id()) {
+		session_start();
+	}
+}
+
+function myEndSession() {
+	session_destroy ();
+}
+
 function the_breadcrumb() {
 	echo '<ol id="crumbs"  class="breadcrumbs" >';
 	echo '<li><a href="';
@@ -102,5 +116,66 @@ function contactForm($atts) {
 }
 
 add_shortcode( 'contact_form', 'contactForm' );
+
+add_action( 'admin_post_mail_contact', 'sendContact' );
+add_action( 'admin_post_nopriv_mail_contact', 'sendContact' );
+
+function sendContact() {
+	if (!empty($_POST)) {
+		if( isset($_POST['cName'])
+				&& isset($_POST['cEmail'])
+				&& isset($_POST['cSubject'])
+				&& isset($_POST['cMessage'])
+				&& isset($_REQUEST['g-recaptcha-response'])
+				)
+		{
+	
+			$name = $_POST['cName'];
+			$email = $_POST['cEmail'];
+			$subject = $_POST['cSubject'];
+			$message = $_POST['cMessage'];
+			$reCAPTCHA = $_REQUEST['g-recaptcha-response'];
+	
+			//Sprawdzenie reCAPTCHA
+			$url = 'https://www.google.com/recaptcha/api/siteverify';
+			$myvars = 'secret=6LfHigcUAAAAADIP7wUxynAesVu_I_L_aMJ1e9LP&response=' . $reCAPTCHA;
+	
+			$ch = curl_init( $url );
+			curl_setopt( $ch, CURLOPT_POST, 1);
+			curl_setopt( $ch, CURLOPT_POSTFIELDS, $myvars);
+			curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt( $ch, CURLOPT_HEADER, 0);
+			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+	
+			$response = curl_exec( $ch );
+			$json = json_decode($response, true);
+	
+			if("true" == $json['success']) {
+					
+				//add_filter ( 'wp_mail_content_type', create_function ( '', 'return "text/html"; ' ) );
+				$email = wp_mail('monika.nawrocka@centrumstatystyczne.pl', $subject, $message, array('From: '.$name.' <'.$email.'>') );
+				//remove_filter ( 'wp_mail_content_type', 'set_html_content_type' );
+				
+				if($email) {
+					$_SESSION['sendContactResult'] = 1;
+				} else {
+					$_SESSION['sendContactResult'] = 0;
+				}
+					
+			} else {
+				$_SESSION['sendContactResult'] = -1;
+				/*error-codes:
+					missing-input-secret	The secret parameter is missing.
+					invalid-input-secret	The secret parameter is invalid or malformed.
+					missing-input-response	The response parameter is missing.
+					invalid-input-response	The response parameter is invalid or malformed
+				 */
+			}
+		}
+	}
+	
+	wp_redirect( get_permalink( $_REQUEST['origin'] ) );
+	exit();
+}
 
 ?>
