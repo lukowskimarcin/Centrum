@@ -1,5 +1,4 @@
 <?php
-  
 
 function the_breadcrumb() {
 	echo '<ol id="crumbs"  class="breadcrumbs" >';
@@ -14,7 +13,7 @@ function the_breadcrumb() {
 	
 		if (is_category() || is_single()) {
 			echo '<li><span class="sep"> &raquo; </span>';
-			the_category(' </li><li> ');
+			the_category ( ' </li><li> ' );
 			if (is_single()) {
 				echo '</li><li><span class="sep"> &raquo; </span>';
 				echo '<a href="' . get_permalink() . '">';
@@ -36,58 +35,72 @@ function the_breadcrumb() {
 	elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
 	echo '</ol>';
 }
-
 function register_my_menus() {
-  register_nav_menus(
-    array(
-      'menu_poziome' => __( 'Poziome menu' ) 
-    )
-  );
+	register_nav_menus ( array (
+			'menu_poziome' => __ ( 'Poziome menu' ) 
+	) );
 }
-
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
-function my_wp_nav_menu_args($args = '')
-{
-    $args['container'] = false;
-    return $args;
+function my_wp_nav_menu_args($args = '') {
+	$args ['container'] = false;
+	return $args;
 }
+
 // Remove Injected classes, ID's and Page ID's from Navigation <li> items
-function my_css_attributes_filter($var)
-{
-    return is_array($var) ? array() : '';
+function my_css_attributes_filter($var) {
+	return is_array ( $var ) ? array () : '';
 }
 
+remove_all_filters ( 'menu_breadcrumb_markup' );
 
- remove_all_filters( 'menu_breadcrumb_markup' );
+// add my own Menu Breadcrumb markup filter
+function my_menu_breadcrumb_markup($markup) {
+	return $markup;
+}
+add_filter ( 'menu_breadcrumb_markup', 'my_menu_breadcrumb_markup' );
+remove_all_filters ( 'menu_breadcrumb_item_markup' );
 
-    // add my own Menu Breadcrumb markup filter
-    function my_menu_breadcrumb_markup( $markup ) {
-        return   $markup ;
-    }
-    add_filter( 'menu_breadcrumb_markup', 'my_menu_breadcrumb_markup' );
-
-
-remove_all_filters( 'menu_breadcrumb_item_markup' );
-
-    // add my own Menu Breadcrumb item filter
-    function my_menu_breadcrumb_item_markup( $markup, $breadcrumb ) {
-        // $markup is in the format of <a href="{Menu Item URL}">{Menu Item Title}</a>
-        // $breadcrumb is the Menu item object itself
-        return '<li>' . $markup . '</li>';
-    }
-    add_filter( 'menu_breadcrumb_item_markup', 'my_menu_breadcrumb_item_markup', 10, 2 );
-
-
+// add my own Menu Breadcrumb item filter
+function my_menu_breadcrumb_item_markup($markup, $breadcrumb) {
+	// $markup is in the format of <a href="{Menu Item URL}">{Menu Item Title}</a>
+	// $breadcrumb is the Menu item object itself
+	return '<li>' . $markup . '</li>';
+}
+add_filter ( 'menu_breadcrumb_item_markup', 'my_menu_breadcrumb_item_markup', 10, 2 );
 function modify_read_more_link() {
-	return '<a class="read-more btn btn-info" href="' . get_permalink() . '">Czytaj dalej</a><div class="clearfix"></div>';
+	return '<a class="read-more btn btn-info" href="' . get_permalink () . '">Czytaj dalej</a><div class="clearfix"></div>';
 }
-add_filter( 'the_content_more_link', 'modify_read_more_link' );
+add_filter ( 'the_content_more_link', 'modify_read_more_link' );
 
-add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes
-add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID
-add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's
- 
-add_action( 'init', 'register_my_menus' );
+add_filter ( 'wp_nav_menu_args', 'my_wp_nav_menu_args' ); // Remove surrounding <div> from WP Navigation
+add_filter ( 'nav_menu_css_class', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> injected classes
+add_filter ( 'nav_menu_item_id', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> injected ID
+add_filter ( 'page_css_class', 'my_css_attributes_filter', 100, 1 ); // Remove Navigation <li> Page ID's
+
+add_action ( 'init', 'register_my_menus' );
+
+/*
+ * Wysylanie maili
+ */
+
+add_action ( 'phpmailer_init', 'moja_funckja_smtp_email' );
+function moja_funckja_smtp_email($phpmailer) {
+	$phpmailer->isSMTP ();
+	$phpmailer->Host = "mail-serwer15044.lh.pl"; // Adres serwera SMTP
+	$phpmailer->Port = "465"; // Nr portu, zazwyczaj: 25|465|587
+	
+	$phpmailer->SMTPAuth = true; // Autoryzacja SMTP: true|false
+	$phpmailer->SMTPSecure = "ssl"; // Typ szyfrowania, zazwyczaj: tls|ssl
+	
+	$phpmailer->Username = "powiadomienia@centrumstatystyczne.pl"; // Nazwa użytkownika dla serwera SMTP
+	$phpmailer->Password = "Nightangels1"; // Hasło użytkownika dla serwera SMTP
+}
+
+function contactForm($atts) {
+	include_once("contact-form.php");
+}
+
+add_shortcode( 'contact_form', 'contactForm' );
+
 ?>

@@ -7,7 +7,7 @@
 		<?php if ( have_posts() ) : ?>
 
 
-		<div class="alert alert-info search-result">
+		<div class="alert alert-info alert_anim">
 			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<h2 class="page-title"><?php printf( 'Wynik wyszukiwania dla: <strong>%s</strong>', get_search_query() ); ?></h2>
 		</div>

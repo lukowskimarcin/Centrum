@@ -265,35 +265,27 @@ post-title {
 	border-color: #269abc;
 }
 
-
 .no-result {
 	margin-bottom: 500px;
 }
-
-
 
 @keyframes search_result_anim {
     0%   {
     	height: 0%;
     	opacity: 0;
     }
-    
-    
-    
-    
     100% {
     	height: 100%;
     	opacity: 1;
     }
 }
 
-.search-result {
+.alert_anim {
 	animation-name: search_result_anim;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: easy-in-out;
 }
-
 
 @media ( max-width :767px) {
 	#search {
@@ -332,8 +324,6 @@ post-title {
 	-webkit-transition: -webkit-transform .4s ease-in-out;
           transition:         transform .4s ease-in-out;
 }
-
- 
 
 
 /* =WordPress Core

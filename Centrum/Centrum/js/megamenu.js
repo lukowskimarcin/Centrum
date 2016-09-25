@@ -5,11 +5,10 @@ function iconClick(){
         $(this).parent().children("ul").fadeToggle(150);
         
         if ($( this ).find(".glyphicon").css( "transform" ) == 'none' ){
-            $(this).find(".glyphicon").css("transform","rotate(180deg)");
+            $(this).find(".glyphicon").css("transform","rotate(-180deg)");
         } else {
             $(this).find(".glyphicon").css("transform","" );
         }
-        
     }
 }
 

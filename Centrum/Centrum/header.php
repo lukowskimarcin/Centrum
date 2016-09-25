@@ -7,15 +7,14 @@
 <meta name="google-site-verification" content="RYKy-OxKhwkAVxtc2fvwZPWWaKU8j2heR6Xtt-87NLs" />
 
 <meta http-equiv="content-language" content="pl">
-<link hreflang="pl" href="http://centrumstatystyczne.pl/" rel="alternate" />
 
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"> 
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/megamenu.css">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ionicons.min.css">
 
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.min.js"></script>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/megamenu.js"></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/scripts.js"></script>
 
