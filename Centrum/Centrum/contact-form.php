@@ -83,7 +83,7 @@ if (isset ( $_SESSION ['sendContactResult'] )) {
 <script type="text/javascript">
 $(document).ready(function () {
 	$("#cName").focus();
-}
+})
 </script>
 
 </form>
