@@ -31,12 +31,6 @@
 				</a>
 			</div>
 			<div  class="col-sm-3 col-sm-push-6 ">
-					<div  class="hidden-xs contact" style="height:60px;">
-						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl" >
-							<span class="glyphicon glyphicon-envelope"> </span>
-							Kontakt
-						</a>
-					</div>
 					<form action="<?php bloginfo('url'); ?>" role="search" method="get" accept-charset="utf-8" class="form-search">
 					<div  id="search" class="input-group">
 							<input name="s" type="text" class="form-control" placeholder="Szukaj...">
@@ -47,12 +41,6 @@
 							</span>
 					</div>
 					</form>
-					<div  class="visible-xs contact">
-						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl"  >
-							<span class="glyphicon glyphicon-envelope"> </span>
-							Kontakt
-						</a>
-					</div>
 					<div class="clearfix"></div>
 			</div>
 		</div>
