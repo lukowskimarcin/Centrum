@@ -40,7 +40,7 @@ div {
 #search {
 	margin-bottom: 5px;
 	float: left;
-	 
+	margin-top: 25px;
 }
 
 #sidebar {
@@ -290,6 +290,7 @@ post-title {
 @media ( max-width :767px) {
 	#search {
 		margin-bottom: 5px;
+		margin-top: 5px;
 		foat: left;
 		width: 65%;
 	}
