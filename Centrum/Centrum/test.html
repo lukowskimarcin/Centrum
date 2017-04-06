@@ -18,37 +18,30 @@
 </head>
 <body>
 	 
-	
+ 
+	 
 	 <div class="container-fluid">
 	 	<div class="row">
-			<div class="col-sm-1 ">
-				<img id="logo" alt="" src="images/logo.png" style="margin-bottom: -30px;"/>
+			<div class="col-sm-2 ">
+				<a href="http://centrumstatystyczne.pl/">
+					<img id="logo" alt="Centrum Statystyczne" src="images/logo.png" style="margin-bottom: -30px;"/>
+				</a>
 			</div>
-			<div  class="col-sm-3 col-sm-push-7 ">
-					<div  class="hidden-xs contact" style="height:60px;">
-						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl" >
-							<span class="glyphicon glyphicon-envelope"> </span>
-							Kontakt
-						</a>
-					</div>
+			<div  class="col-sm-3 col-sm-push-6 ">
+					<form action="<?php bloginfo('url'); ?>" role="search" method="get" accept-charset="utf-8" class="form-search">
 					<div  id="search" class="input-group">
-							<input type="text" class="form-control" placeholder="Szukaj...">
+							<input name="s" type="text" class="form-control" placeholder="Szukaj...">
 							<span class="input-group-btn">
-								<button class="btn btn-info" type="button">
+								<button id="searchsubmit" name="submit" class="btn btn-info" type="submit">
 									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								</button>
 							</span>
 					</div>
-					<div  class="visible-xs contact">
-						<a href="mailto:monika.nawrocka@centrumstatystyczne.pl"  >
-							<span class="glyphicon glyphicon-envelope"> </span>
-							Kontakt
-						</a>
-					</div>
+					</form>
 					<div class="clearfix"></div>
-					
 			</div>
 		</div>
+		 
 	 </div>
 	 
 	 <div class="container-fluid wrapper">
