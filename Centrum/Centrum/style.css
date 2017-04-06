@@ -291,8 +291,8 @@ post-title {
 	#search {
 		margin-bottom: 5px;
 		margin-top: 5px;
-		foat: left;
-		/*width: 65%;*/
+		float: left;
+		 
 	}
 	.contact {
 		color: #999;
