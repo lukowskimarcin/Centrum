@@ -5,3 +5,7 @@ http://scrollme.nckprsn.com
 
 one page wordpress
 http://qnimate.com/creating-a-one-page-wordpress-theme/
+
+
+https://github.com/abeMedia/jquery-smoove
+http://www.jqueryscript.net/demo/jQuery-Plugin-To-Add-CSS3-Scrolling-Effects-On-Your-Web-Page-Smoove/
