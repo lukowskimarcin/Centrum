@@ -9,3 +9,7 @@ http://qnimate.com/creating-a-one-page-wordpress-theme/
 
 https://github.com/abeMedia/jquery-smoove
 http://www.jqueryscript.net/demo/jQuery-Plugin-To-Add-CSS3-Scrolling-Effects-On-Your-Web-Page-Smoove/
+
+
+https://www.youtube.com/watch?v=ePgnR4gHIi4&t=1905s
+https://github.com/jlmakes/scrollreveal
