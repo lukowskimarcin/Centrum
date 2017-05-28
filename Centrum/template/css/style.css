@@ -44,6 +44,12 @@
 	border: 0px solid; 
 }
 
+@media ( max-width :767px) {
+	.navbar-transparent {
+		background: black;
+	}
+}
+
 .navbar-transparent-shrink {
 	background: black;
 }
