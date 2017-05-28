@@ -1,32 +1,88 @@
  div {
- border: 1px solid purple;
+ /*border: 1px solid purple;*/
  }
  
- .header-top {
-	width: 100%;
-    z-index: 9999;
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-    
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: transparent;
-    
+ * {
+ padding: 0px;
+ margin: 0px;
  }
+
+/*********************************************************************************/
+/* HEADER */
+
+.navbar-brand {
+	position: fixed; display: block;
+}
  
- .navbar-right {
-    float: right!important;
-    margin-right: -15px;
+.navbar-header, .navbar-brand, .nav > li > a {
+	line-height: 80px;
+	height: 80px;
+	padding-top: 0;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.navbar-nav {
+	margin-top:0px;
+}
+
+.navbar-toggle {
+	margin-top: 25px;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.navbar-toggle-shrink {
+	margin-top: 8px
+}
+
+.navbar-transparent {
+	background: transparent;
+	 -webkit-transition: background 2s ease;  
+	transition: background 2s ease;
+	
+	border: 0px solid; 
+}
+
+.navbar-transparent-shrink {
+	background: black;
+}
+ 
+.navbar-height50 {
+	height: 50px;
+	line-height: 50px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  width: auto;
+  
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 
+ 
+
+
+
+/*********************************************************************************/
+/* CONTENT */
 #content {
 	background-color:  gray;
 }
 
-.header-background {
-	background: linear-gradient(70deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), transparent url(../images/carusel1.jpg) center center/cover no-repeat scroll;
-	 
-	height: 400px;
-}
+ 
+/*********************************************************************************/ 
+/* FOOTER */ 
+ 
+#footer {
+	background: black;
+} 
+
+
+
