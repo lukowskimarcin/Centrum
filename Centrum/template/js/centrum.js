@@ -28,7 +28,7 @@ $(document).ready(function() {
 	});
 	
 	$(".navbar-right > li > a").on('click', function(e) {
-		$(document).scrollTo($(this).attr('href'), 1500 );
+		$(document).scrollTo($(this).attr('href'), 1000 );
 	});
 	
 });
