@@ -44,6 +44,11 @@
   color: #ffffff;
   background-color: #272b2e;
   
+   
+    color: #fff;
+    background: #f57c00;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -151,12 +156,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 @media ( max-width :767px) {
 	.navbar-transparent {
-		background: black;
+		background: #393c3e;
 	}
 }
 
 .navbar-transparent-shrink {
-	background: black;
+	background: #393c3e;
 }
  
 .navbar-height50 {
