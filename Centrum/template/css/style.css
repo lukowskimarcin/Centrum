@@ -134,6 +134,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .navbar-nav {
 	margin-top:0px;
+	text-transform:  uppercase;
 }
 
 .navbar-toggle {
@@ -187,6 +188,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 /*********************************************************************************/
 /* CONTENT */
+
+.section {
+	height: 300px;
+
+	}
+
 #content {
 	 
 }
@@ -199,5 +206,10 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	background: black;
 } 
 
+
+#contact {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 
 
