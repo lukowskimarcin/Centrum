@@ -2,10 +2,15 @@
  /*border: 1px solid purple;*/
  }
  
- * {
- padding: 0px;
- margin: 0px;
+ body {
+ /* 	font-size: 62.5%; */
  }
+ 
+ * {
+ 	padding: 0px;	
+ 	margin: 0px;
+ 	box-sizing: border-box;
+ } 
 
 /*********************************************************************************/
 /* HEADER */
@@ -30,7 +35,7 @@
 }
 .navbar-default .navbar-nav > li > a {
   color: #c8c8c8;
-      font-weight: 600;
+  font-weight: 600;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -44,11 +49,9 @@
   color: #ffffff;
   background-color: #272b2e;
   
-   
-    color: #fff;
-    background: #f57c00;
-    box-shadow: 0 2px 3px rgba(0,0,0,.2);
-  
+  color: #fff;
+  background: #f57c00;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -120,7 +123,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
  
  
 .navbar-brand {
-	position: fixed; display: block;
+	position: fixed; 
+	display: block;
 }
  
  
@@ -130,7 +134,18 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	padding-top: 0;
 	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
+		padding-left: 10px;
 }
+
+.menu_hover {
+	position: relative;
+	bottom: 10px;
+	display: none;
+	height: 4px;
+	background-color: #f57c00;
+}
+  
+
 
 .navbar-nav {
 	margin-top:0px;
@@ -151,8 +166,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	background: transparent;
 	 -webkit-transition: background 2s ease;  
 	transition: background 2s ease;
-	
-	border: 0px solid; 
 }
 
 @media ( max-width :767px) {
@@ -174,15 +187,26 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   padding: 0px;
 }
 
-.navbar-brand > img {
+.navbar-brand  a,
+.navbar-brand  a:FOCUS,
+.navbar-brand  a:VISITED,
+.navbar-brand  a:HOVER
+ {
+	font-size: 24px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.navbar-brand >  a > img {
   height: 100%;
   width: auto;
-  
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-
+.logoText {
+	text-decoration: none;
+}
 
 
 
@@ -191,11 +215,17 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .section {
 	height: 300px;
-
-	}
+	display: block;
+	border: 1px solid black;
+	background: gray;
+}
 
 #content {
-	 
+	
+}
+
+#knowledgeCenter {
+bacground: #393c3e;
 }
 
  
