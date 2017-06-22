@@ -36,6 +36,13 @@
 .navbar-default .navbar-nav > li > a {
   color: #c8c8c8;
   font-weight: 600;
+  
+  line-height : 80px;
+  height : 80px;
+  
+  display: block;
+  position: relative;
+  
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -122,6 +129,10 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 } 
  
  
+#menu {
+	position: relative;
+} 
+ 
 .navbar-brand {
 	position: fixed; 
 	display: block;
@@ -134,22 +145,30 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	padding-top: 0;
 	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
-		padding-left: 10px;
+	padding-left: 10px;
 }
 
 .menu_hover {
-	position: relative;
+	position: absolute;
 	bottom: 10px;
 	display: none;
 	height: 4px;
 	background-color: #f57c00;
+	width: 100%;
+	z-index: 999999; 
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
 }
-  
-
 
 .navbar-nav {
 	margin-top:0px;
 	text-transform:  uppercase;
+	position: relative;
+}
+
+.navbar-nav {
+	position: relative; 	
+	
 }
 
 .navbar-toggle {
@@ -208,6 +227,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	text-decoration: none;
 }
 
+.navbar-collapse {
+	max-height: 1000px;
+}
 
 
 /*********************************************************************************/
@@ -225,7 +247,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 #knowledgeCenter {
-bacground: #393c3e;
+	bacground: #393c3e;
 }
 
  
@@ -243,3 +265,6 @@ bacground: #393c3e;
 }
 
 
+.navbar-collapse {
+	max-height: 1000px;
+}

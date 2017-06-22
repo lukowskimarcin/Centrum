@@ -1,6 +1,6 @@
 $(window).scroll(function() {
 		
-	if ($(document).scrollTop() > 30) {
+	if ($(document).scrollTop() > 50) {
 		$('nav').addClass('navbar-transparent-shrink');
 		$('.navbar-nav > li > a').css({'line-height' : '50px','height' : '50px'	});
 		$('.navbar-brand > a > img').css("height", "50px");
@@ -8,6 +8,8 @@ $(window).scroll(function() {
 		$('.navbar-brand').addClass('navbar-height50');
 		$('.navbar-header').addClass('navbar-height50');
 		$('.navbar-toggle').addClass('navbar-toggle-shrink');
+		
+		$('.menu_hover').css("bottom", "10px");
 		
 	} else {
 		$('nav').removeClass('navbar-transparent-shrink');
@@ -18,26 +20,31 @@ $(window).scroll(function() {
 		$('.navbar-header').removeClass('navbar-height50');
 		$('.navbar-toggle').removeClass('navbar-toggle-shrink');
 		
+		$('.menu_hover').css("bottom", "25px");
 	}
 });
 
 
 $(document).ready(function() {
 	//Menu dodanie 
-	$(".navbar-nav >  li").each(function(){
-    	//$(this).append('<div class="menu_hover"></div>');
+	i = 0;
+	$(".navbar-nav >  li ").each(function(){
+		if(i>0){
+			$(this).append('<span class="menu_hover"></span>');	
+		}
+		i++;
     });
 	
 	
-	 $(".navbar-nav >  li").mouseenter(function(){
+	 $(".navbar-nav li").not(".active").mouseenter(function(){
 //	    	if ($(window).width() > 943) {
-	    		$(this).children(".menu_hover").css('display', 'block');
+	 		$(this).children(".menu_hover").css('display', 'block');
 	//    	}
 	    });
 	    
-	    $(".navbar-nav >  li").mouseleave(function(){
+	    $(".navbar-nav li").not(".active").mouseleave(function(){
 	  //  	if ($(window).width() > 943) {
-	    		$(this).children(".menu_hover").css('display', 'none');
+	    	$(this).children(".menu_hover").css('display', 'none');
 	    //	}
 	   });
 	
@@ -48,6 +55,7 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 	
+	//Menu scrolowanie do pozycji
 	$(".navbar-right > li > a").on('click', function(e) {
 		$(document).scrollTo($(this).attr('href'), 1000, {offset: -50} );
 	});
