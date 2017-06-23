@@ -20,50 +20,52 @@
   background-color: #3a3f44;
   border-color: #2b2e32;
 }
-.navbar-default .navbar-brand {
-  color: #c8c8c8;
-  color: #1e94cc;
-}
+ 
+ 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #ffffff;
   background-color: none;
   font-weight: bolder;
 }
-.navbar-default .navbar-text {
-  color: #c8c8c8;
-}
+
+
 .navbar-default .navbar-nav > li > a {
   color: #c8c8c8;
   font-weight: 600;
-  
   line-height : 80px;
   height : 80px;
-  
   display: block;
   position: relative;
   
 }
+
+
+
+.navbar-nav-hover {
+	color: #ffffff;
+  	background-color: rgba(0,0,0,0.4);
+  	
+  	/*opacity: 0.5;*/
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: #272b2e;
-  opacity: 0.5;
+   color: #cccccc;
 }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: #272b2e;
-  
-  color: #fff;
   background: #f57c00;
   box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
+
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
@@ -148,16 +150,41 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	padding-left: 10px;
 }
 
+
+@keyframes menu_hover_anim{
+    0%   {
+    	width: 0%;
+    	background-color: #02516f;
+    }
+    100% {
+    	width: 95%;
+    	background-color: #5bc0de;
+    }
+}
+
 .menu_hover {
+	margin: 0 auto;
+    left: 0;
+    right: 0; 
+		
 	position: absolute;
 	bottom: 10px;
 	display: none;
 	height: 4px;
 	background-color: #f57c00;
-	width: 100%;
+	 
 	z-index: 999999; 
 	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
+	
+	animation-name: menu_hover_anim;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: easy-in-out;
+    
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
+	box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
 }
 
 .navbar-nav {
@@ -182,9 +209,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-transparent {
-	background: transparent;
+	background-color: rgba(57,60,62,0.5);
+	
 	 -webkit-transition: background 2s ease;  
 	transition: background 2s ease;
+	border: 0px;
+	
 }
 
 @media ( max-width :767px) {
@@ -225,6 +255,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .logoText {
 	text-decoration: none;
+	color: #cccccc;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .navbar-collapse {
