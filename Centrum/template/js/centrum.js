@@ -3,7 +3,7 @@ $(window).scroll(function() {
 	if ($(document).scrollTop() > 50) {
 		$('nav').addClass('navbar-transparent-shrink');
 		$('.navbar-nav > li > a').css({'line-height' : '50px','height' : '50px'	});
-		$('.navbar-brand > a > img').css("height", "50px");
+		$('.navbar-brand  > img').css("height", "50px");
 		$('.navbar-brand').addClass('navbar-height50');
 		$('.navbar-header').addClass('navbar-height50');
 		$('.navbar-toggle').addClass('navbar-toggle-shrink');
@@ -12,7 +12,7 @@ $(window).scroll(function() {
 	} else {
 		$('nav').removeClass('navbar-transparent-shrink');
 		$('.navbar-nav > li > a').css({'line-height' : '80px','height' : '80px'	});
-		$('.navbar-brand > a > img').css("height", "80px");
+		$('.navbar-brand  > img').css("height", "80px");
 		$('.navbar-brand').removeClass('navbar-height50');
 		$('.navbar-header').removeClass('navbar-height50');
 		$('.navbar-toggle').removeClass('navbar-toggle-shrink');
@@ -23,6 +23,8 @@ $(window).scroll(function() {
 
 
 $(document).ready(function() {
+	window.scrollTo(0, 0);
+	
 	//Menu dodanie 
 	i = 0;
 	$(".navbar-nav >  li ").each(function(){

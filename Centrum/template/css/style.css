@@ -40,13 +40,9 @@
   
 }
 
-
-
 .navbar-nav-hover {
 	color: #ffffff;
   	background-color: rgba(0,0,0,0.4);
-  	
-  	/*opacity: 0.5;*/
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -138,6 +134,15 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-brand {
 	position: fixed; 
 	display: block;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	
+}
+
+.navbar-brand > img {
+	display: inline-block;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
 }
  
  
@@ -149,7 +154,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 	transition: all 1s ease;
 	padding-left: 10px;
 }
-
 
 @keyframes menu_hover_anim{
     0%   {
@@ -209,7 +213,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-transparent {
-	background-color: rgba(57,60,62,0.5);
+	background-color: rgba(57,60,62,0.4);
 	
 	 -webkit-transition: background 2s ease;  
 	transition: background 2s ease;
@@ -255,7 +259,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 .logoText {
 	text-decoration: none;
-	color: #cccccc;
+	color: #fff;
 	font-size: 20px;
 	font-weight: 600;
 }
