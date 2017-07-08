@@ -267,11 +267,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-collapse {
 	max-height: 1000px;
 }
-
-
+ 
 /*********************************************************************************/
 /* CONTENT */
-
 .section {
 	height: 300px;
 	display: block;
