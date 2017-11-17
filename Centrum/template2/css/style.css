@@ -1,0 +1,189 @@
+ div {
+ /*border: 1px solid purple;*/
+ }
+ 
+ body {
+ /* 	font-size: 62.5%; */
+ }
+ 
+ * {
+ 	padding: 0px;	
+ 	margin: 0px;
+ 	box-sizing: border-box;
+ } 
+
+/*********************************************************************************/
+/* HEADER */
+
+#myCarousel {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.navbar-brand {
+	line-height: 80px;
+	height: 80px;
+	padding-top: 0;
+	display: block;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.navbar-brand > img {
+	display: inline-block;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.navbar-header, .navbar-brand, .nav > li > a {
+	line-height: 80px;
+	height: 80px;
+	padding-top: 0;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	padding-left: 10px;
+}
+
+.navbar-toggle {
+	margin-top: 25px;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.navbar-transparent-shrink {
+ 
+}
+ 
+.navbar-height50 {
+	height: 50px;
+	line-height: 50px;
+}
+
+.navbar-toggle-shrink {
+	margin-top: 8px
+} 
+
+.logoText {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+
+
+@media ( max-width :767px) {
+	.navbar-nav > li {
+		height: 50px;
+	}
+	
+	.home-icon {
+	 	padding-left: 0px;
+	}
+}
+/******************************************************************************************************* */
+.home-icon {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.navbar-centrum {
+	border-radius: 0px;
+    font-size: 16px;
+    background-color: #1a284d;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+}
+
+.navbar-centrum .navbar-toggle .icon-bar {
+  background-color: #c8c8c8;
+}
+
+
+/******************************************************************************************************* */
+@keyframes menu_hover_anim{
+    0%   {
+    	width: 0%;
+    	background-color: #02516f;
+    }
+    100% {
+    	width: 95%;
+    	background-color: #5bc0de;
+    }
+}
+
+.menu_hover {
+	margin: 0 auto;
+    left: 0;
+    right: 0; 
+		
+	position: absolute;
+	bottom: 10px;
+	display: none;
+	height: 4px;
+	background-color: #f57c00;
+	 
+	z-index: 999999; 
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	
+	animation-name: menu_hover_anim;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: easy-in-out;
+    
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
+	box-shadow: 0px 0px 10px 0px rgba(91,192,222,1);
+}
+
+
+main {
+	min-height: 1000px;
+	display: block;
+}
+
+
+section {
+	min-height: 300px;
+	display: block;
+}
+
+
+#offer{
+	
+}
+
+#aboutMe{
+	background: #f3f6fd;
+}
+
+#projectsRealization{
+	
+}
+
+#priceList{
+	background: #f3f6fd;
+}
+
+#contact{
+	padding: 30px 0px;
+	
+}
+
+
+footer {
+	display: block;
+	background:	#162347;
+	height: 100px;
+}
+
+.copyright {
+	display:inline-block;
+	margin-top: 30px;
+	color: #fff;
+	font-size: 20px;
+	width: 100%;
+}
