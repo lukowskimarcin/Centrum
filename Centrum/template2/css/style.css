@@ -12,6 +12,17 @@
  	box-sizing: border-box;
  } 
 
+h1, h2, h3, h4, h5, h6 {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    padding: 0px;
+    color: #1a284d;
+    margin: 0px 0px 15px 0px;
+    line-height: 1.5;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
 /*********************************************************************************/
 /* HEADER */
 
@@ -20,6 +31,20 @@
 	width: 100%;
 	overflow: hidden;
 }
+
+.carousel-banner {
+	background: white;
+	color: blue;
+	border-radius: 25px;
+	position: absolute;
+	top: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	width: 40%;
+}
+
 
 
 .navbar-brand {

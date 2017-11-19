@@ -34,10 +34,7 @@ $(window).scroll(function() {
 		$('.navbar-toggle').removeClass('navbar-toggle-shrink');
 		$('.menu_hover').css("bottom", "23px");
 		$('.navbar-brand  > img').css("padding", "5px");
-		
-		
 	}
-	 
 });
  
 
@@ -102,6 +99,8 @@ $(document).ready(function() {
 	//Menu scrolowanie do pozycji
 	$(".navbar-right > li > a").on('click', function(e) {
 		$(document).scrollTo($(this).attr('href'), 1000, {offset: -50} );
+		
+		
 	});
 	
 });
