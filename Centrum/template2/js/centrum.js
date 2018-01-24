@@ -2,7 +2,7 @@ var caruselHeight;
 var actualScroll;  
 
 function menuPosition() {
-	caruselHeight = $('#myCarousel').height();
+	caruselHeight = $('#centrum-carousel').height();
 	actualScroll = $(document).scrollTop();
 
 	if (actualScroll > caruselHeight) {
